@@ -114,8 +114,8 @@ void find_y_center(void) {
 	/////Patrick will do this///////
 }
 
-double IR_magnitude(void) {
-	V = (ADC1BUF3 /4095 ) * 3.3					//Returns the current IR diode magnitude in volts
+double IR_magnitude(){
+	return (ADC1BUF3 /4095 ) * 3.3					//Returns the current IR diode magnitude in volts
 }
 
 void delay_s(double s);							//Uses timer1
