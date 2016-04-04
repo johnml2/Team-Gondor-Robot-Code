@@ -53,7 +53,9 @@ double centering_tolerance = 0.25;	//Tolerance on centering routine. Measured in
 /////////////////////////////////////////////////////////////////////
 
 void config_IO(void) { 				                         // Configure Input and Output Pins
-	//////John, you’ve been keeping track of the pinout. Can you place all of the pin configurations in this function?/////
+	_TRISB7 = 0;        	//Set pin 11 as output (Solenoid)
+    	_TRISB8 = 0;        	//Set pin 12 as output (DC Motor)
+    	//////John, you’ve been keeping track of the pinout. Can you place all of the pin configurations in this function?/////
 }
 
 void config_ad(void);		                			// Configure Analog to Digital
@@ -461,12 +463,10 @@ void __attribute__((interrupt, no_auto_psv)) _T1Interrupt(void)
 }
 
 void shoot(void){
-	_TRISB7 = 0;        	//Set pin 11 as output
-    	_TRISB8 = 0;        	//Set pin 12 as output
+	_RB7 = 0; 		//Set pin 11 low (Solenoid)
+	_RB8 = 0; 		//Set pin 12 low (DC Motor)
 	config_timer();
-  	_RB7 = 0; 		//Set pin 11 low - Solenoid
-	_RB8 = 0; 		//Set pin 12 low - DC Motor
-	_RB8 = 1;
+  	_RB8 = 1;
 	delay_s(1);
 	_RB7 = 1;
 	delay_s(.25);
