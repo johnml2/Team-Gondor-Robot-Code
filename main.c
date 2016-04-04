@@ -281,7 +281,7 @@ void config_timer(int timer, int prescale){
                 T1CON = 0b1000000000110000; 
             else if (prescale == 64)
                 T1CON = 0b1000000000100000; 
-            else if (prescale == 9)
+            else if (prescale == 8)
                 T1CON = 0b1000000000010000; 
             else
                 T1CON = 0b1000000000000000;
@@ -291,7 +291,7 @@ void config_timer(int timer, int prescale){
                 T2CON = 0b1000000000110000; 
             else if (prescale == 64)
                 T2CON = 0b1000000000100000; 
-            else if (prescale == 9)
+            else if (prescale == 8)
                 T2CON = 0b1000000000010000; 
             else
                 T2CON = 0b1000000000000000;
@@ -301,7 +301,7 @@ void config_timer(int timer, int prescale){
                 T3CON = 0b1000000000110000; 
             else if (prescale == 64)
                 T3CON = 0b1000000000100000; 
-            else if (prescale == 9)
+            else if (prescale == 8)
                 T3CON = 0b1000000000010000; 
             else
                 T3CON = 0b1000000000000000;
@@ -311,7 +311,7 @@ void config_timer(int timer, int prescale){
                 T4CON = 0b1000000000110000; 
             else if (prescale == 64)
                 T4CON = 0b1000000000100000; 
-            else if (prescale == 9)
+            else if (prescale == 8)
                 T4CON = 0b1000000000010000; 
             else
                 T4CON = 0b1000000000000000;
@@ -321,7 +321,7 @@ void config_timer(int timer, int prescale){
                 T5CON = 0b1000000000110000; 
             else if (prescale == 64)
                 T5CON = 0b1000000000100000; 
-            else if (prescale == 9)
+            else if (prescale == 8)
                 T5CON = 0b1000000000010000; 
             else
                 T5CON = 0b1000000000000000;
